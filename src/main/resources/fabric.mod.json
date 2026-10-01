@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "version": "${version}",
+  "name": "${name}",
+  "description": "A 3D rendering library.",
+  "authors": [
+    "Starred"
+  ],
+  "contact": {},
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      {
+        "value": "foo.starred.parallax.Parallax",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "mixins": [
+    "${id}.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*",
+    "minecraft": "${minecraft}"
+  },
+  "accessWidener": "${tweaker}",
+  "custom": {
+    "modmenu": {
+      "update_checker": false,
+      "badges": ["library"]
+    }
+  }
+}
