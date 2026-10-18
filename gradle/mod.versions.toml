@@ -1,6 +1,6 @@
 [versions]
 id = "parallax"
 name = "Parallax"
-version = "2026.10.1"
+version = "2026.10.2"
 group = "foo.starred"
 tweaker = "parallax.accesswidener"

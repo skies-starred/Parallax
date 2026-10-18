@@ -1,4 +1,4 @@
-﻿@file:Suppress("ConstPropertyName", "Unused")
+@file:Suppress("ConstPropertyName", "Unused")
 
 package foo.starred.parallax
 
@@ -9,7 +9,7 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 object Parallax : ClientModInitializer {
-    const val version: String = /*$ mod_version*/ "2026.10.1-b1"
+    const val version: String = /*$ mod_version*/ "2026.10.2"
     const val id: String = /*$ mod_id*/ "parallax"
     const val name: String = /*$ mod_name*/ "Parallax"
 
