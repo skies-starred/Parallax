@@ -28,6 +28,22 @@ value class ParallaxShapeScope @PublishedApi internal constructor(@PublishedApi 
         ParallaxCircle.frame(center, radius, color, normal, width, depth)
     }
 
+    inline fun filledCylinder(bottom: Vec3, radius: Double, height: Double, color: Int, depth: Boolean = true) {
+        ParallaxCylinder.fill(bottom, radius, height, color, depth)
+    }
+
+    inline fun frameCylinder(bottom: Vec3, radius: Double, height: Double, color: Int, width: Float = 2f, depth: Boolean = true) {
+        ParallaxCylinder.frame(bottom, radius, height, color, width, depth)
+    }
+
+    inline fun filledSphere(center: Vec3, radius: Double, color: Int, depth: Boolean = true) {
+        ParallaxSphere.fill(center, radius, color, depth)
+    }
+
+    inline fun frameSphere(center: Vec3, radius: Double, color: Int, width: Float = 2f, depth: Boolean = true) {
+        ParallaxSphere.frame(center, radius, color, width, depth)
+    }
+
     inline fun line(start: Vector3f, end: Vector3f, color: Int, width: Float = 2f, depth: Boolean = true) {
         ParallaxLine.singular(start, end, color, width, depth)
     }

@@ -14,7 +14,7 @@ import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.sqrt
 
-object ParallaxCircleRenderer : IParallaxRenderer {
+object ParallaxCircleRenderer : IParallaxRenderer() {
     override fun render(poseStack: PoseStack, pose: PoseStack.Pose, collector: SubmitNodeCollector) {
         forDepth(ParallaxRenderQueue.circles0) { depth, circles ->
             val renderType = if (depth) ParallaxRenderTypes.CIRCLE_OUTLINE.depth else ParallaxRenderTypes.CIRCLE_OUTLINE.depthless

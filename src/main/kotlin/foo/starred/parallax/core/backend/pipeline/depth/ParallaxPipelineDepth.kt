@@ -1,4 +1,4 @@
-﻿package foo.starred.parallax.core.backend.pipeline.depth
+package foo.starred.parallax.core.backend.pipeline.depth
 
 import com.mojang.blaze3d.pipeline.RenderPipeline
 import java.util.*
@@ -10,13 +10,13 @@ import com.mojang.blaze3d.platform.CompareOp
 
 enum class ParallaxPipelineDepth(val vanilla: Optional<DepthStencilState>) {
     NONE(Optional.empty()),
-    EQUAL(Optional.of(DepthStencilState(CompareOp.EQUAL, true))),
+    EQUAL(Optional.of(DepthStencilState(CompareOp.EQUAL, false))),
     //~ if >= 26.2 'LESS_THAN_OR_EQUAL' -> 'GREATER_THAN_OR_EQUAL'
-    LEQUAL(Optional.of(DepthStencilState(CompareOp.LESS_THAN_OR_EQUAL, true))),
+    LEQUAL(Optional.of(DepthStencilState(CompareOp.LESS_THAN_OR_EQUAL, false))),
     //~ if >= 26.2 'CompareOp.LESS_THAN,' -> 'CompareOp.GREATER_THAN,'
-    LESS(Optional.of(DepthStencilState(CompareOp.LESS_THAN, true))),
+    LESS(Optional.of(DepthStencilState(CompareOp.LESS_THAN, false))),
     //~ if >= 26.2 'CompareOp.GREATER_THAN,' -> 'CompareOp.LESS_THAN,'
-    GREATER(Optional.of(DepthStencilState(CompareOp.GREATER_THAN, true)));
+    GREATER(Optional.of(DepthStencilState(CompareOp.GREATER_THAN, false)));
 
     fun build(builder: RenderPipeline.Builder) {
         builder.withDepthStencilState(vanilla)

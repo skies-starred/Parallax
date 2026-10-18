@@ -8,7 +8,7 @@ import foo.starred.parallax.core.queue.impl.ParallaxRenderQueue
 import foo.starred.parallax.core.renderers.base.IParallaxRenderer
 import net.minecraft.client.renderer.SubmitNodeCollector
 
-object ParallaxLineRenderer : IParallaxRenderer {
+object ParallaxLineRenderer : IParallaxRenderer() {
     override fun render(poseStack: PoseStack, pose: PoseStack.Pose, collector: SubmitNodeCollector) {
         forDepth(ParallaxRenderQueue.lines) { depth, lines ->
             val renderType = if (depth) ParallaxRenderTypes.LINES.depth else ParallaxRenderTypes.LINES.depthless

@@ -12,6 +12,10 @@ interface IParallaxRenderQueue {
     val boxes1: DualExtractedParallaxQueueElement<ExtractedParallaxBox>
     val circles0: DualExtractedParallaxQueueElement<ExtractedParallaxCircle>
     val circles1: DualExtractedParallaxQueueElement<ExtractedParallaxCircle>
+    val cylinders0: DualExtractedParallaxQueueElement<ExtractedParallaxCylinder>
+    val cylinders1: DualExtractedParallaxQueueElement<ExtractedParallaxCylinder>
+    val spheres0: DualExtractedParallaxQueueElement<ExtractedParallaxSphere>
+    val spheres1: DualExtractedParallaxQueueElement<ExtractedParallaxSphere>
 
     var empty: Boolean
 

@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.SubmitNodeCollector
 import net.minecraft.client.renderer.blockentity.BeaconRenderer
 import kotlin.math.sqrt
 
-object ParallaxBeamRenderer : IParallaxRenderer {
+object ParallaxBeamRenderer : IParallaxRenderer() {
     override fun render(poseStack: PoseStack, pose: PoseStack.Pose, collector: SubmitNodeCollector) {
         if (ParallaxRenderQueue.beams.empty()) return
 

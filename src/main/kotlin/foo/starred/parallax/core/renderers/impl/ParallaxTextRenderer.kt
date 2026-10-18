@@ -8,7 +8,7 @@ import net.minecraft.client.gui.Font
 import net.minecraft.client.renderer.SubmitNodeCollector
 import net.minecraft.util.LightCoordsUtil
 
-object ParallaxTextRenderer : IParallaxRenderer {
+object ParallaxTextRenderer : IParallaxRenderer() {
     override fun render(poseStack: PoseStack, pose: PoseStack.Pose, collector: SubmitNodeCollector) {
         if (ParallaxRenderQueue.texts.empty()) return
 
