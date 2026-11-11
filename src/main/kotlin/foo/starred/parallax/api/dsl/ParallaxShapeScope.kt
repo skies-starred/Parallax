@@ -52,6 +52,10 @@ value class ParallaxShapeScope @PublishedApi internal constructor(@PublishedApi 
         ParallaxLine.multiple(points, color, width, depth)
     }
 
+    inline fun tracer(end: Vector3f, color: Int, width: Float = 3f, depth: Boolean = false) {
+        ParallaxLine.tracer(end, color, width, depth)
+    }
+
     inline fun beam(pos: BlockPos, color: Int) {
         ParallaxBeam.extract(pos, color)
     }
