@@ -13,7 +13,7 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           jq -n \
-            --arg thread "1574027099889733803" \
+            --arg thread "1574027766121111573" \
             --arg repo "$REPO" \
             --argjson commits "$COMMITS" \
             '{thread: $thread, repo: $repo, commits: $commits}' \
